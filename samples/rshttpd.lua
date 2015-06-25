@@ -2,8 +2,8 @@
 
 	An example for lsocket
 
-	Gunnar Zötl <gz@tset.de>, 2013-03
-	Released under MIT/X11 license. See file LICENSE for details.
+	Gunnar Zötl <gz@tset.de>, 2013-2015
+	Released under the terms of the MIT license. See file LICENSE for details.
 
 	use:
 	
@@ -234,7 +234,7 @@ local function read_request(self, sock)
 
 	-- read request line
 	local b, e, ln, rq = next_line(self, sock, "", pos)
-	method, url, httpver = match(ln, "^(%a+)%s+([^%s]+)%s+HTTP/([%d\.]+)$")
+	method, url, httpver = match(ln, "^(%a+)%s+([^%s]+)%s+HTTP/([%d.]+)$")
 	if not method then return error("can't find request line") end
 	if find(url, "?", 1, true) then
 		path, args = match(url, "^([^?]+)%?(.+)$")
@@ -466,8 +466,8 @@ function httpd_methods:step(tmout)
 			elseif self.stillalive[s] then
 				self.stillalive[s] = nil
 				remove_from_queue(self.rsocks, s)
-				begin_request(self, s)
-			else
+				begin_request(self, s
+)			else
 				continue_request(self, s)
 			end
 		end

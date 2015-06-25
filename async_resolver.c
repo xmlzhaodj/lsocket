@@ -3,8 +3,8 @@
  * provide asynchronous dns lookup support. This is a companion lib to
  * lsocket, but can also be used without it.
  *
- * Gunnar Zötl <gz@tset.de>, 2013
- * Released under MIT/X11 license. See file LICENSE for details.
+ * Gunnar Zötl <gz@tset.de>, 2013-2015
+ * Released under the terms of the MIT license. See file LICENSE for details.
  */
 
 #include <sys/types.h>
